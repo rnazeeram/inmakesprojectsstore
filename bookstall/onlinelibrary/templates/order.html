@@ -1,0 +1,243 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>order your book</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}"/>
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+</head>
+
+<body>
+<section class="contact_section ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h3>
+                Contact Us
+              </h3>
+              <p>
+                It is a long established fact that a reader will be distracted
+                by the readable
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="contact-form">
+            <h5>
+             ORDER YOUR BOOK
+            </h5>
+            <form action="{% url 'shop:order' %}" method="POST" >
+             {% csrf_token %}
+              <div>
+                <input type="text" name="custname" placeholder="Customer name">
+              </div>
+              <div>
+                 <input type="number" name="phnumber" placeholder="Phone number">
+              </div>
+              <div>
+               <input type="email" name="email" placeholder="Email">
+              </div>
+              <div>
+                <input type="text" name="address" placeholder="Address">
+              </div>
+
+              <div>
+               <label for="districts">Districts</label>
+                <div>
+                  <select id="Districts">
+                    <option value="District">............</option>
+                    <option value="Kannur">Kannur</option>
+                    <option value="Kozhikkod">Kozhikkod</option>
+                    <option value="Thrissur">Thrissur</option>
+                    <option value="palakkad"> palakkad</option>
+                    <option value="Ernamkulam">Ernamkulam</option>
+                    <option value="Idukki">Idukki</option>
+                   <option value="Trivandrum">Trivandrum</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="City">Sub Branch</label>
+                  <div>
+                    <select id="City">
+                      <option value="Sub branch">............</option>
+                        <option value="th">thalassery</option>
+                    <option value="ar">areeacode</option>
+                    <option value="pav">pavaratty</option>
+                    <option value="ku"> kunissery</option>
+                    <option value="pal">palarivattom</option>
+                    <option value="ne">nenmara</option>
+                   <option value="ko">kovalam</option>
+                    </select>
+                  </div>
+              </div>
+
+              <div>
+               <label for="Authors">Authors</label>
+                <div>
+                  <select id="Authors">
+                    <option value="Authors">............</option>
+                      <option value="basheer">Vaikom Muhammed Basheer</option>
+                    <option value="thakazhi">Thakazhi</option>
+                    <option value="hakkeem">Hakkeem Morayur</option>
+                    <option value="deepa"> Dheepa Nishanth</option>
+                    <option value="azheekkod">Sukumar Azheekkod</option>
+                    <option value="meera">K.R.Meera</option>
+                   <option value="Kamala">Madhavikkutty</option>
+
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="books">Books</label>
+                  <div>
+                    <select id="books">
+                      <option value="Books">............</option>
+                        <option value="pathumma">Pathummaayude Ad</option>
+                    <option value="baalya">Baalyakaalasakhi</option>
+                    <option value="viswa">Viswa Vikyathamaaya mookku</option>
+                    <option value="mathil">Mathilukal</option>
+                    <option value="Bhoomi">Bhoomiyude Avakashikal</option>
+                    <option value="aarachar">Aaraachaar</option>
+                   <option value="moonnu pennungal">Moonnu Pennungal</option>
+                    </select>
+                  </div>
+              </div>
+
+              <div class="d-flex justify-content-center">
+                <button type="submit" class="btn_on-hover">
+                  Place Order
+                </button>
+              </div>
+              <div class="d-flex justify-content-center">
+                  <button>
+                    <a  href="{% url 'credentials:logout' %}">log out</a>
+                  </button>
+                </div>
+            </form>
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end contact section -->
+
+  <!-- info section -->
+  <section class="info_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="info_menu">
+            <h5>
+              QUICK LINKS
+            </h5>
+            <ul class="navbar-nav  ">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="authors.html"> Authors </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="districts.html"> Districts </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="event.html"> Events </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login1.html">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_course">
+            <h5>
+              TOP RATED BOOKS
+            </h5>
+            <p>
+              nowdays people get attracted towards thriller, psycopath, books....
+              also some realistic books going trendy...
+              romance, evergreen tales...
+              all type trending books can be searched and booked online ...
+
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-5 offset-md-1">
+          <div class="info_news">
+            <h5>
+              FOR ANY QUERY, PLEASE WRITE TO US
+            </h5>
+            <div class="info_contact">
+              <a href="">
+                pavaratty
+              </a>
+              <a href="">
+                marjaan20@gmail.com
+              </a>
+              <a href="">
+                Call : +01 1234567890
+              </a>
+            </div>
+            <form action="">
+              <input type="text" placeholder="Enter Your email" />
+              <button>
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <footer class="container-fluid footer_section">
+    <p>
+      &copy; 2021 All Rights Reserved By
+      <a href="#">marjaan EbookShelf</a>
+    </p>
+  </footer>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+
+</body>
+
+</html>

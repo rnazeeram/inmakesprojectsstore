@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>navbar</title>
+
+  <style>body{
+background: #dedede;
+font-family: arial;
+margin: 0;
+padding: 0;
+}
+.dropdwn{
+margin: 0 auto;
+}
+nav{
+height: 60px;
+background: #2c3e50;
+box-shadow: 0 0px 5px rgba(0,0,0,0.1);
+}
+.logo{
+padding: 5px 0 0 80px;
+width:50px;
+height:50px;
+}
+nav ul{
+padding: 0;
+margin: 0;
+float: right;
+margin-right: 30px;
+}
+
+nav ul li{
+
+position: relative;
+life-style: none;
+display: inline-block;
+}
+nav ul li a{
+background: #2c3e50;
+display: block;
+padding: 0 15px;
+color: white;
+text-decoration: none;
+line-height: 60px;
+font-size: 20px;
+}
+nav ul li a:hover{
+background: #243342;
+}
+nav ul ul{
+position: absolute;
+top: 60px;
+display: none;
+}
+nav ul li:hover > ul{
+display: block;
+}
+nav ul ul li{
+width:150px;
+float: none;
+display: list-item;
+position: alternative;
+}
+nav ul ul ul li{
+position: relative;
+top: -60px;
+left: 150px;
+
+}</style>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"/>
+</head>
+<body>
+  <div class="dropdwn">
+    <nav>
+      <img class="logo" src="static/images/logo.png" alt=""/>
+      <ul>
+        <li><a href="{% url 'shop:index' %}">Home</a></li>
+        <li>
+          <a href="#">centres</a>
+                <ul>
+                  <li><a href="#">Kasargod</a>
+                    <ul>
+                      <li><a href="#"> Kanjangad </a></li>
+                      <li><a href="#"> Nileshwaram </a></li>
+                      <li><a href="#"> Uppala</a> </li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Kannur</a>
+                    <ul>
+                      <li><a href="#"> Thalipparamba </a></li>
+                      <li><a href="#"> Thalassery </a></li>
+                      <li><a href="#"> Payyannur</a> </li>
+                    </ul>
+                  </li>
+                   <li><a href="#">Kozhikkod</a>
+                      <ul>
+                        <li><a href="#"> Manjery </a></li>
+                        <li><a href="#"> Areacode </a></li>
+                        <li><a href="#"> Calicut</a> </li>
+                      </ul>
+                  </li>
+                   <li><a href="#">Trissur</a>
+                      <ul>
+                        <li><a href="#"> Westfort</a></li>
+                        <li><a href="#"> Pavaratty </a></li>
+                        <li><a href="#"> Kodungallur</a> </li>
+                      </ul>
+                  </li>
+                   <li><a href="#">Ernamkulam</a>
+                      <ul>
+                        <li><a href="#"> Edappilly </a></li>
+                        <li><a href="#"> kochi </a></li>
+                        <li><a href="#"> Aluva</a> </li>
+                        <li><a href="#"> Muvattupuzha</a></li>
+                    </ul>
+                  </li>
+                   <li><a href="#">Kollam</a>
+                      <ul>
+                      <li><a href="#"> Paravur </a></li>
+                      <li><a href="#"> kallada </a></li>
+                    </ul>
+                  </li>
+                   <li><a href="#">Trivandrum</a>
+                    <ul>
+                      <li><a href="#"> Trivandrum </a></li>
+                      <li><a href="#"> Attingal </a></li>
+                      <li><a href="#"> Nedumangad </a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="{% url 'credentials:register' %}"> Register </a>
+              </li>
+              <li>
+                <a href="{% url 'credentials:login1' %}">Login</a>
+              </li>
+      </ul>
+    </nav>
+  </div>
+
+</body>
+</html>
